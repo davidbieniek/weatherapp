@@ -9,7 +9,12 @@ button.addEventListener("click", () => {
   )
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
-      temp.innerHTML = `${res.main.temp} C`;
-    });
+      if (res.name !== undefined) {
+        console.log(res);
+        temp.innerHTML = `${res.main.temp} °C`;
+      } else {
+        temp.innerHTML = "Błąd: Nie znaleziono miasta";
+      }
+    })
+    .catch((error) => console.log("Błąd: ", error));
 });

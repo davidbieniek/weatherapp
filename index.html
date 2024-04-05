@@ -3,16 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div>
-      <div>
-        <input type="text" id="cityValue" />
-        <input type="submit" value="Szukaj" id="but" />
+    <div class="container">
+      <div class="search-container">
+        <input type="text" id="cityValue" placeholder="Wpisz miasto..." />
+        <button id="but">Szukaj</button>
       </div>
-      <div>
-        <div class="temp"></div>
+      <div class="weather-info">
+        <div class="temp">---</div>
       </div>
     </div>
     <script src="main.js"></script>
